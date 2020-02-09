@@ -7,24 +7,27 @@
     </view>
     <view class="divider"></view>
     <view class="body">
+      <view class="fixed">
+        <button class="fixed-button" title="Cadastrar"/>
+      </view>
       <view class="card-product" v-for="product in products" :key="product.txtApiName">
-        <view class="card-product-name">
+        <view :style="{flex: 1,flexDirection: 'row', marginLeft:8}">
           <text class="txt-card-product">{{txtName}}</text>
           <text class="txt-card-product-api">{{product.txtApiName}}</text>
         </view>
+        <view :style="{flex: 1,flexDirection: 'row', marginLeft:8}">
           <text class="txt-card-product">{{txtPrice}}</text>
           <text class="txt-card-product-api">{{product.txtApiPrice}}</text>
+        </view>
+        <view :style="{flex: 1,flexDirection: 'row', marginLeft:8}">
           <text class="txt-card-product">{{txtAmount}}</text>
           <text class="txt-card-product-api">{{product.txtApiAmount}}</text>
-
-          <view class="card-product-button">
+        </view>
+        <view :style="{flex: 1,flexDirection: 'row', marginLeft:8, marginBottom:8}">
             <button class="card-product-button-edit" title="Editar"/>
-            <button class="card-product-button-delete" color="#FF4646" title="Deletar"/>
+            <button class="card-product-button-delete" color="red" title="Deletar"/>
           </view>
       </view>
-    </view>
-    <view class="footer">
-      <button class="footer-button" title="Cadastrar"/>
     </view>
 </scroll-view>
 </template>
@@ -84,9 +87,11 @@ data() {
   font-weight: bold;
 }
 .divider{
-  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100%;
-  border-color: #707070;
+  height: 1px;
+  background-color: #707070;
 }
 .body{
   margin-left: 10px;
@@ -98,9 +103,6 @@ data() {
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: 11px;
-}
-.card-product-name{
-  flex: 0;
 }
 .txt-card-product{
   font-size: 20px;
@@ -117,10 +119,8 @@ data() {
 .card-product-button-edit{
   max-width: 150px;
 }
-.footer{
-  margin-bottom: 5px;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 20px;
+.fixed{
+  width: 100px;
+  height: 45px;
 }
 </style>
