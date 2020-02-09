@@ -1,17 +1,28 @@
 <template>
   <view class="container">
-    <text class="text-color-primary">Hello Word</text>
+    <view class="header">
+      <text class="txt-header">{{txtHeader}}</text>
+    </view>
+    <view class="divider"></view>
+    <view class="body">
+      
+    </view>
+    <view class="footer">
+      <button class="footer-button" title="Cadastrar"/>
+    </view>
   </view>
 </template>
 
-<style>
-.container {
-  background-color: white;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
+<script>
+export default {
+data() {
+  return {
+    txtHeader:"Produtos"
+  }
+},
 }
-.text-color-primary {
-  color: blue;
-}
+</script>
+
+<style scoped>
+
 </style>
