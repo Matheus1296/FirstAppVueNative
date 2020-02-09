@@ -47,9 +47,11 @@ export default {
   font-weight: bold;
 }
 .divider{
-  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100%;
-  border-color: #707070;
+  height: 1px;
+  background-color: #707070;
 }
 .body{
   margin-left: 10px;
