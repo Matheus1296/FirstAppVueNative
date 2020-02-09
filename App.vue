@@ -8,7 +8,7 @@
     <view class="divider"></view>
     <view class="body">
       <view class="fixed">
-        <button class="fixed-button" title="Cadastrar"/>
+        <button class="fixed-button" :on-press="onPressGoCreate" title="Cadastrar"/>
       </view>
       <view class="card-product" v-for="product in products" :key="product.txtApiName">
         <view :style="{flex: 1,flexDirection: 'row', marginLeft:8}">
@@ -23,9 +23,14 @@
           <text class="txt-card-product">{{txtAmount}}</text>
           <text class="txt-card-product-api">{{product.txtApiAmount}}</text>
         </view>
-        <view :style="{flex: 1,flexDirection: 'row', marginLeft:8, marginBottom:8}">
-            <button class="card-product-button-edit" title="Editar"/>
-            <button class="card-product-button-delete" color="red" title="Deletar"/>
+        <view :style="{
+          flex: 1,
+          flexDirection: 'row',
+          marginLeft:8,
+          marginBottom:8,
+        }">
+            <button title="Editar"/>
+            <button color="red" title="Deletar"/>
           </view>
       </view>
     </view>
@@ -63,6 +68,11 @@ data() {
       },
 
     ]
+  }
+},
+methods: {
+  onPressGoCreate(){
+    
   }
 },
 }
@@ -110,14 +120,12 @@ data() {
   font-family: sans-serif;
 }
 .txt-card-product-api{
+  margin-left: 5px;
   font-size: 20px;
 }
 .card-product-button{
   margin-left: 5px;
   margin-right: 5px;
-}
-.card-product-button-edit{
-  max-width: 150px;
 }
 .fixed{
   width: 100px;
