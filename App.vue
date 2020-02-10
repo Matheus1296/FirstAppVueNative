@@ -14,7 +14,7 @@ import createProduct from "./src/createProduct";
 const StackNavigator = createStackNavigator(
   {
     Home: index,
-    Details: createProduct,
+    Create: createProduct,
   },
   {
     initialRouteName: 'Home',
