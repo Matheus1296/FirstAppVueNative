@@ -70,9 +70,14 @@ data() {
     ]
   }
 },
+props: {
+  navigation: {
+    type: Object
+  }
+  },
 methods: {
   onPressGoCreate(){
-    
+    this.navigation.navigate("Create")
   }
 },
 }
@@ -86,7 +91,6 @@ methods: {
   flex: 1;
 }
 .header{
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
