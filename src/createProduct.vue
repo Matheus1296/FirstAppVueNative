@@ -6,8 +6,20 @@
     <view class="divider"></view>
     <view class="body">
       <text class="txt-body">{{txtName}}</text>
+      <text-input
+        :style="{height: 50, borderRadius:10, backgroundColor:'#fff'}"
+        v-model="inputName"
+      />
       <text class="txt-body">{{txtPrice}}</text>
+      <text-input
+        :style="{height: 50, borderRadius:10, backgroundColor:'#fff'}"
+        v-model="inputPrice"
+      />
       <text class="txt-body">{{txtAmount}}</text>
+      <text-input
+        :style="{height: 50, borderRadius:10, backgroundColor:'#fff'}"
+        v-model="inputAmount"
+      />
     </view>
     <view class="footer">
       <button class="footer-button" title="Cadastrar"/>
@@ -22,7 +34,10 @@ export default {
       txtHeader: "Cadastro de Produtos",
       txtName: "Nome:",
       txtPrice: "Preço:",
-      txtAmount: "Quantidade:"
+      txtAmount: "Quantidade:",
+      inputName: "",
+      inputPrice: 0,
+      inputAmount: 0,
     }
   },
 }
@@ -36,7 +51,6 @@ export default {
   flex: 1;
 }
 .header{
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -55,6 +69,7 @@ export default {
 }
 .body{
   margin-left: 10px;
+  margin-right: 10px;
 }
 .txt-body{
   font-size: 20px;
@@ -63,6 +78,8 @@ export default {
 }
 
 .footer{
+  margin-top: auto;
+  margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
